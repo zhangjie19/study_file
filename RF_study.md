@@ -12,11 +12,11 @@
 
 特点：
 
-	1. 编写用例简单，可以以robot、Txt、Tsv、Html的格式编写用例
-	1. 自动生成HTML格式的测试报告和日志。
-	1. 除了自带的类库之外，还有很多实用的扩展类库。
-	1. 可以根据项目需要自定义一些关键字。
-	1. 可以使用GUI的方式运行，可以和`SVN`、`GIT`以及`jenkins`持续集成。
+1. 编写用例简单，可以以robot、Txt、Tsv、Html的格式编写用例
+1. 自动生成HTML格式的测试报告和日志。
+1. 除了自带的类库之外，还有很多实用的扩展类库。
+1. 可以根据项目需要自定义一些关键字。
+1. 可以使用GUI的方式运行，可以和`SVN`、`GIT`以及`jenkins`持续集成。
 
 
 
@@ -28,11 +28,50 @@
 
    安装`pip install robotframework==3.1`
 
- 3. 在dos窗口中安装RIDE工具。
+3. 在dos窗口中安装RIDE工具。
 
     `pip install robotframework-ride`
 
     ![image-20221109195504772](C:\Users\zhangjie\Desktop\学习资料\study_file\img\image-20221109195504772.png)
+
+4.  双击RIDE图标，或者dos窗口输入ride.py
+
+## 三、RF的使用
+
+1. 创建项目：`new project`
+
+   注意：输入项目名称，选择项目路径，选择Dictionary目录
+
+2. 创建测试套件(它是测试用例的载体) `new Testsuite`
+
+   注意：选择File
+
+3. 创建测试用例 `new Testcase`
+
+4. 创建业务关键字 (资源文件，它是自定义关键字的载体)`new Resource`
+
+   注意：只能在文件夹下面创建，并且是Txt格式，它是自定义关键字的载体
+
+## 五、RF常用类库
+
+1. 标准库：不需要安装，直接用，RF自带
+   - Buitini（测试库）
+   - Collections（集合库）
+   - Date Time（时间）
+   - ScreenShot（截屏）
+
+2. 扩展库：需要通过pip安装库
+   - Web自动化测试：SeleniumLibrary，Selenium2Library，SeleniumLibrary for java等
+   - API接口自动化：RequestsLibrary
+   - APP自动化测试：AppiumLibrary
+
+## 六、RF常用关键字的使用
+
+- 快捷键
+  1. 搜索关键字：F5
+  2. 自动补全关键字：Ctrl+Shift
+
+
 
 
 
