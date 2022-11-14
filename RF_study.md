@@ -69,13 +69,26 @@
 
 - 快捷键
   1. 搜索关键字：F5
-  2. 自动补全关键字：Ctrl+Shift
+  2. 自动补全关键字：Ctrl+Shift+空格
+  
+  关键字用法：
+  
+  | 关键字                | 用法             |
+  | --------------------- | ---------------- |
+  | Log                   | 打印日志         |
+  | Comment               | 注释             |
+  | Set Variable          | 设置变量         |
+  | Get Time              | 获取时间         |
+  | Catenate              | 字符串拼接       |
+  | Create List           | 创建列表         |
+  | Create Dictionary     | 创建字典         |
+  | Get Dictionary Keys   | 获取字典Key值    |
+  | Get Dictionary Values | 获取字典value值  |
+  | Get From Dictionary   | 根据key获取value |
+  | Evaluate              | 执行python方法   |
 
+​		![image-20221114233604206](.\img\image-20221114233604206.png)
 
+![image-20221114233621051](.\img\image-20221114233621051.png)
 
-
-
-
-
-
-
+ ![image-20221114233659743](.\img\image-20221114233659743.png)
