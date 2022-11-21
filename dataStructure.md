@@ -114,23 +114,64 @@ class Deque:
 ## 四、链表
 
 ```python
-
+# 链表
 class Node:
-    def __init__(self,item=None):
-        self.item=item
-        self.next=None
+    def __init__(self, item=None):
+        self.item = item
+        self.next = None
 
 
 class Link:
 
     def __init__(self):
-        self._head=Node()
+        self._head = None
+        self.count = 0
 
-    def add(self,item):
+    def add(self, item):
         node = Node(item)
-        node.next=self._head
-        self._head=node
-    def get(self):
-        return self._head
+        node.next = self._head
+        self._head = node
+        self.count += 1
+
+    def append(self, item):
+        cur = self._head
+        node = Node(item)
+        pre = None
+        if not self._head:
+            self._head = node
+        else:
+            while cur:
+                pre = cur
+                cur = cur.next
+            pre.next = node
+        self.count += 1
+
+    def search(self, item):
+        ex = False
+        cur = self._head
+        while cur:
+            if cur.item==item:
+                ex=True
+                break
+            cur=cur.next
+        return ex
+
+    def insert(self,pop,item):
+        node=Node(item)
+        cur = self._head
+        ex=0
+        if pop<=0:
+            self.add(item)
+        elif pop>self.size():
+            self.append(item)
+        else:
+            while cur:
+                pre=cur
+                cur = cur.next
+                if ex==pop-1:
+                    pre.next=node
+                    node.next=cur
+                    break
+                ex+=1
 ```
 
