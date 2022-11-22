@@ -150,28 +150,55 @@ class Link:
         ex = False
         cur = self._head
         while cur:
-            if cur.item==item:
-                ex=True
+            if cur.item == item:
+                ex = True
                 break
-            cur=cur.next
+            cur = cur.next
         return ex
 
-    def insert(self,pop,item):
-        node=Node(item)
+    def insert(self, index, item):
+        node = Node(item)
         cur = self._head
-        ex=0
-        if pop<=0:
+        ex = 0
+        if index <= 0:
             self.add(item)
-        elif pop>self.size():
+        elif index > self.size():
             self.append(item)
         else:
             while cur:
-                pre=cur
+                pre = cur
                 cur = cur.next
-                if ex==pop-1:
-                    pre.next=node
-                    node.next=cur
+                if ex == index - 1:
+                    pre.next = node
+                    node.next = cur
                     break
-                ex+=1
+                ex += 1
+        self.count += 1
+
+    def remove(self, item):
+        cur = self._head
+        if not self.isEmpty():
+            if cur.item == item:
+                self._head = cur.next
+            else:
+                while cur:
+                    pre = cur
+                    cur = cur.next
+                    if cur.item == item:
+                        pre.next = cur.next
+                        break
+            self.count -= 1
+
+    def travel(self):
+        cur = self._head
+        while cur:
+            print(cur.item)
+            cur = cur.next
+
+    def isEmpty(self):
+        return self._head is None
+
+    def size(self):
+        return self.count
 ```
 
